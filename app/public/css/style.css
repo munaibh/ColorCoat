@@ -1,0 +1,259 @@
+.bounceIn {
+  animation: bounceIn 0.3s ease-in;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+:root {
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  font: 1rem 'Montserrat', sans-serif;
+}
+
+.link {
+  color: #E95787;
+}
+
+.sidebar {
+  width: 20rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sidebar__nav {
+  padding-left: 10em;
+  list-style: none;
+  text-decoration: none;
+}
+
+.sidebar_tagline {
+  font-size: 1.3rem;
+  font-family: Montserrat;
+  color: #363842;
+  text-transform: uppercase;
+  padding-left: 7.6em;
+  margin-bottom: 1.4em;
+}
+
+.sidebar_tagline span {
+  font-weight: 400;
+}
+
+.nav__item {
+  margin-bottom: 1.8em;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #363842;
+  font-weight: 500;
+  letter-spacing: .2px;
+  transition: all 0.3s ease;
+}
+
+.nav__item--active .nav__link, .nav__item:hover .nav__link {
+  color: #E95787;
+}
+
+.st0 {
+  fill: #e95787;
+}
+
+.st2 {
+  fill: #3B364B;
+}
+
+.st1 {
+  fill: none;
+  stroke: #ED2024;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+
+.st3 {
+  fill: none;
+  stroke: #3B364B;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+
+.st4 {
+  fill: none;
+  stroke: #3B364B;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.main {
+  width: calc(100% - 20rem);
+  padding: 80px 80px 0 80px;
+  margin-left: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.palletes {
+  width: 14.87rem;
+  flex-grow: 1;
+  padding: 1.429em 0;
+  margin-bottom: 3.143em;
+  text-decoration: none;
+  border: 0.07143rem solid transparent;
+}
+
+.palletes:empty {
+  visibility: hidden;
+}
+
+.palletes__colour {
+  width: 3.286em;
+  height: 3.286em;
+  position: relative;
+  display: block;
+  z-index: 1;
+  margin: 0 auto;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.palletes__colour:after {
+  content: attr(data-color);
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  line-height: 3.286em;
+  text-align: center;
+  text-decoration: none;
+  mix-blend-mode: luminosity;
+}
+
+.palletes__colour:hover {
+  z-index: 10;
+  width: 8.571em;
+  transform: scale(1.2);
+}
+
+.palletes__colour:hover:after {
+  opacity: 1;
+}
+
+.favourite {
+  text-align: center;
+}
+
+.favourite__button {
+  font-size: 1rem;
+  padding: 1.333rem 0 0 0;
+  display: block;
+  font-family: Montserrat;
+  text-decoration: none;
+  font-weight: 600;
+  color: #AAAFC6;
+  transition: all 0.2s linear;
+  display: inline-block;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.favourite__button:hover {
+  color: #E95787;
+}
+
+.favourite__button--checked {
+  color: #E95787;
+  pointer-events: none;
+}
+
+.about {
+  width: calc(100% - 20rem);
+  padding: 248px 80px 0 80px;
+  margin-left: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about__headline {
+  margin: 0 auto;
+  font-size: 1.56rem;
+  font-weight: 500;
+}
+
+.about__info {
+  color: #AAAFC6;
+  font-size: 1.2rem;
+  margin-top: 21px;
+  line-height: 2rem;
+  padding: 0 6em;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+  }
+  .sidebar__nav {
+    width: 100%;
+    padding: 1.333rem;
+    display: inline-block;
+    text-align: center;
+  }
+  .nav__link {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+  }
+  .nav__item {
+    display: inline-block;
+    width: auto;
+  }
+  .sidebar_tagline {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  svg {
+    height: 170px;
+    margin: -30px auto 0 auto;
+    display: block;
+    transform: translateX(-44px);
+  }
+  .main, .about {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 0 0 0;
+    margin: -100px 0 0 0;
+  }
+  .about {
+    margin-top: 0;
+  }
+  .palletes {
+    width: 185px;
+  }
+}
