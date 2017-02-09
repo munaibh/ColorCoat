@@ -1,0 +1,37 @@
+{
+  "name": "colorcoat",
+  "version": "1.0.0",
+  "description": "A clone of http://www.lolcolors.com/ made using NodeJS, ExpressJS and MongoDB",
+  "main": "app/app.js",
+  "dependencies": {
+    "connect-livereload": "^0.6.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.5",
+    "express": "^4.14.1",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-express": "^0.3.5",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-if": "^2.0.1",
+    "mongodb": "^2.2.22"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean-css": "^2.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.1"
+  },
+  "scripts": {
+    "test": "node app/app.js"
+  },
+  "author": "Munaib Hussain",
+  "license": "ISC"
+}
