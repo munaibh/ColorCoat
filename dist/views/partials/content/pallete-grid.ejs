@@ -1,0 +1,17 @@
+<main class="main">
+  <% palletes.forEach(function(i) { %>
+    <div class="palletes">
+      <div class="palletes__item">
+        <% i.colors.forEach(function(c) { %>
+          <a class="palletes__colour" href="#" style="background:<%=c%>" data-color="<%=c%>"></a>
+        <% }); %>
+      </div>
+      <div class="favourite">
+        <button class="favourite__button <%= (voted.indexOf(String(i._id)) != -1) ? 'favourite__button--checked' : null %>" type="button" data-id="<%= i._id %>">
+          <i class="fa fa-heart"></i>
+          <span class="favourite__count"><%= i.likes %></span>
+        </button>
+      </div>
+    </div>
+  <% }); %>
+</main>
